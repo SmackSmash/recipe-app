@@ -8,13 +8,9 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
-  currentRecipe: Recipe[] = [];
+  selectedRecipe: Recipe;
 
   constructor() {}
 
   ngOnInit() {}
-
-  updateRecipe(recipe: Recipe[]) {
-    this.currentRecipe = recipe;
-  }
 }

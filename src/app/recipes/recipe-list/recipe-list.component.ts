@@ -21,13 +21,13 @@ export class RecipeListComponent implements OnInit {
     )
   ];
 
-  @Output() showRecipe = new EventEmitter<Recipe[]>();
+  @Output() recipeWasSelected = new EventEmitter<Recipe>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  passFullRecipe(name: string) {
-    this.showRecipe.emit(this.recipes.filter(recipe => recipe.name === name));
+  onRecipeSelected(recipe: Recipe) {
+    this.recipeWasSelected.emit(recipe);
   }
 }
