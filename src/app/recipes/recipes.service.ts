@@ -45,6 +45,26 @@ export class RecipesService {
         new Ingredient('Butter', 1),
         new Ingredient('Brown Sauce', 1)
       ]
+    ),
+    new Recipe(
+      'Pepperoni Pizza',
+      'Mama Mia!',
+      'http://www.sugardale.com/sites/default/files/stuffed%20crust%20pizza.jpg',
+      [
+        new Ingredient('Flour', 1),
+        new Ingredient('Yeast', 1),
+        new Ingredient('Water', 1),
+        new Ingredient('Olive Oil', 1),
+        new Ingredient('Sugar', 1),
+        new Ingredient('Tinned Tomatoes', 2),
+        new Ingredient('Balsamic vinegar', 1),
+        new Ingredient('Oregano', 1),
+        new Ingredient('Basil', 1),
+        new Ingredient('Salt', 1),
+        new Ingredient('Pepper', 1),
+        new Ingredient('Pepperoni', 20),
+        new Ingredient('Mozzerella Cheese', 20)
+      ]
     )
   ];
 
@@ -52,6 +72,10 @@ export class RecipesService {
 
   getRecipes() {
     return [...this.recipes];
+  }
+
+  getRecipeById(id: number) {
+    return this.recipes[id];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
